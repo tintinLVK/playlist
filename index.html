@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Player</title>
+    <link rel="stylesheet" href="uploads/css/index.css">
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    <script src="assets/js/app.js" defer></script>
+</head>
+<body>
+    <style>
+body {
+    background-image: url('uploads/noir.jpg');
+    background-size: cover;
+    background-color: #f0f0f0; /* Ajoute une couleur de fond */
+}
+    </style>
+    
+    <nav>
+        <ul>
+            <li>
+                <img src="uploads/maison.png" alt="Accueil" width="50">
+                <a>Accueil</a>
+            </li>
+            <li>
+                <img src="uploads/biblio.png" alt="Bibliothèque" width="30">
+                <a>Bibliothèque</a>
+            </li>
+            <li>
+                <img src="uploads/musique.png" alt="Playlist" width="30">
+                <a>Musique</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <div id="home">
+            <h1>Bienvenue sur notre site de musique</h1>
+            <!-- Contenu de la page d'accueil -->
+        </div>
+
+        <h2>Playlist</h2>
+        <div id="album-container">
+            <ul id="album-list">
+                <!-- Ici seront affichés les albums -->
+            </ul>
+        </div>
+
+        <h2>Bibliothèque</h2>
+        <div id="playlist">
+            <ul>
+                <!-- Loop JS Dynamique -->
+             </ul>
+        </div>
+    </div>
+</style>
+<footer id="footer">
+    <div class="music-info">
+        <div class="vinyle-container">
+            <img class="vinyle-image" id="vinyleImage" src="uploads/vinyle.png" alt="Vinyle">
+            <img class="current-music-image" id="currentMusicImage" src="" alt="">
+        </div>
+        <span id="currentMusicTitle"></span>
+    </div>
+    <div class="music-player">
+        <audio controls id="audioPlayer"></audio>
+        <button id="randomButton" class="round-button">
+            <img src="uploads/aleatoire.png" alt="Image aléatoire">
+        </button>
+    </div>
+</footer>
+
+</body>
+</html>

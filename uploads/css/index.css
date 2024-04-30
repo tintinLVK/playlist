@@ -1,0 +1,227 @@
+/* Styles pour le corps de la page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('uploads/noir.jpg');
+    background-size: cover;
+    background-color: #f0f0f0; /* Ajoute une couleur de fond */
+    color: #fff; /* Couleur du texte blanc */
+}
+
+/* Styles pour le menu */
+nav {
+    background-color: rgb(38, 38, 38);
+    color: #fff;
+    width: 200px; /* Largeur du menu */
+    height: 100vh; /* Hauteur de la fenêtre */
+    position: fixed; /* Position fixe pour maintenir le menu à gauche */
+    top: 0; /* Alignement du menu en haut */
+    left: 0; /* Alignement du menu à gauche */
+    padding-top: 20px; /* Espacement du haut du menu */
+    border-right: 2px solid #000000; /* Ajoute une bordure droite blanche à chaque élément de la liste */
+
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    padding: 10px;
+    
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li img {
+    margin-right: 10px; /* Ajoutez la marge à droite pour espacer le texte des logos */
+}
+
+/* Styles pour le contenu */
+.content {
+    margin-left: 200px; /* Marge à gauche pour le contenu */
+    padding: 20px;
+}
+
+/* Styles pour la playlist */
+#playlist {
+    display: flex;
+    overflow-x: auto; /* Activation du défilement horizontal */
+    padding: 20px;
+}
+
+#playlist li {
+    width: 150px; /* Largeur fixe pour chaque élément */
+    height: 150px; /* Hauteur fixe pour chaque élément */
+    margin-right: 20px;
+    padding: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centrage du contenu à l'intérieur du carré */
+    border: 2px solid #ffffff; /* Ajoute une bordure autour de chaque carré */
+    border-radius: 10px; /* Arrondit les coins des carrés */
+    transition: transform 0.3s ease; /* Ajoute une transition fluide lors du survol */
+    background-color: rgb(33, 33, 33);
+}
+
+#playlist li:last-child {
+    margin-right: 0;
+}
+
+#playlist li:hover {
+    background-color: #424242;
+    transform: scale(1.05); /* Agrandit légèrement le carré lors du survol */
+}
+
+#playlist li img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+    border-radius: 50%; /* Arrondit les coins de l'image */
+}
+
+#playlist li h2 {
+    margin: 0;
+    font-size: 14px; /* Augmente légèrement la taille du texte du titre */
+}
+
+#playlist li .artist {
+    font-size: 12px; /* Taille de police plus petite */
+    color: #777; /* Couleur de texte légèrement grise */
+}
+
+#playlist li .category {
+    font-size: 10px; /* Taille de police encore plus petite */
+    color: #999; /* Couleur de texte plus grise */
+}
+
+/* Styles pour le footer */
+#footer {
+    background-color: rgb(24, 24, 24);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    position: fixed; /* Position fixe pour maintenir le footer en bas */
+    bottom: 0; /* Alignement du footer en bas */
+    width: 100%; /* Largeur de la page */
+    border-top: 2px solid #000000; /* Ajout d'un contour en haut du footer */
+    display: flex; /* Utilisation de flexbox */
+    align-items: center; /* Centrer verticalement le contenu */
+    justify-content: center; /* Centrer horizontalement le contenu */
+}
+
+/* Styles pour les éléments dans le footer */
+.music-info {
+    display: flex;
+    align-items: center;
+}
+
+.music-info img {
+    max-width: 100px;
+    margin-right: 10px; /* Décalage de l'image par rapport au texte */
+}
+
+#currentMusicTitle {
+    font-weight: bold; /* Texte en gras */
+    white-space: nowrap; /* Empêcher le texte de passer à la ligne */
+    overflow: hidden; /* Masquer le texte qui dépasse */
+    text-overflow: ellipsis; /* Ajouter des points de suspension */
+    max-width: 250px; /* Limite la largeur du conteneur */
+}
+
+.music-player {
+    display: flex;
+    align-items: center;
+    margin: auto; /* Déplacer le lecteur audio vers la droite autant que possible */
+}
+
+/* Styles pour le vinyle et l'image de la musique en cours */
+.vinyle-container {
+    width: 150px;
+    height: 150px;
+    position: relative;
+}
+
+.vinyle-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    animation: rotation 4s infinite linear;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.current-music-image {
+    width: 60px; /* Taille de l'image de la musique en cours */
+    height: 60px;
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%; /* Pour le rendre en cercle */
+}
+
+/* Animation de rotation */
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* Style pour le bouton aléatoire */
+#randomButton {
+    border: none; /* Supprimer la bordure */
+    background: none; /* Supprimer l'arrière-plan */
+    cursor: pointer;
+    margin-left: 10px; /* Marge à gauche du bouton aléatoire */
+    width: 50px; /* Ajuste la largeur selon tes besoins */
+    height: 50px; /* Ajuste la hauteur selon tes besoins */
+    border-radius: 50%; /* Rend le bouton rond en arrondissant les coins */
+    background-color: #ffffff; /* Couleur de fond du bouton */
+    border: none; /* Supprime les bordures du bouton */
+    cursor: pointer; /* Affiche le curseur sous forme de pointeur au survol */
+    display: flex; /* Utilisation de flexbox pour centrer le contenu */
+    justify-content: center; /* Centre horizontalement le contenu */
+    align-items: center; /* Centre verticalement le contenu */
+}
+
+/* Style pour l'image à l'intérieur du bouton */
+.round-button img {
+    width: 80%; /* Ajuste la taille de l'image selon tes besoins */
+    height: auto; /* Permet à l'image de conserver son ratio hauteur-largeur */
+    border-radius: 50%; /* Rend l'image ronde */
+}
+
+/* Style pour les albums */
+.album {
+    border: 2px solid #333; /* Bordure autour de chaque album */
+    border-radius: 10px; /* Coins arrondis */
+    padding: 10px;
+    margin-bottom: 20px; /* Espacement entre les albums */
+}
+
+.album h3 {
+    margin-top: 0; /* Supprime la marge supérieure du titre */
+}
+
+.album ul {
+    list-style-type: none; /* Supprime les puces de la liste */
+    padding: 0;
+}
