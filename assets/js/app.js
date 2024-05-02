@@ -1,16 +1,21 @@
-    console.log("coucou")
-
     const playlist = document.getElementById("playlist");
     const audioPlayer = document.getElementById("audioPlayer");
     const currentMusicTitle = document.getElementById("currentMusicTitle");
     const currentMusicImage = document.getElementById("currentMusicImage");
     const vinyleImage = document.getElementById("vinyleImage");
     const randomButton = document.getElementById("randomButton");
+    let data = [];
 
     const config = {
         urlCover: "uploads/covers/",
         urlSound: "uploads/musics/",
     };
+
+    const getData = async () => {
+        const req = await fetch("https://api-fak7.onrender.com/api/v1/music/");
+        const dbmusic = await req.json();
+        data = dbmusic.result; // Stockez les données dans la variable data globale
+    }
 
     const musics = [
         {
